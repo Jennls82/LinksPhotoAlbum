@@ -1,4 +1,4 @@
-			
+	
 <!DOCTYPE html>
 <head>
 	<meta charset = "utf-8">
@@ -6,39 +6,53 @@
 	<script src="jquery-2.1.4.min.js" type="text/javascript"></script>
 	<link href="jquery-ui.css" rel="stylesheet"/>
 	<script src="jquery-ui.js" type="text/javascript"></script>
+	<script src="upload.js" type="text/javascript"></script>
 	
 					<!--upload photos, add text input for tag, album, date, user-->
 	<style>
-		/*#tag{width: 50px;}
-		#comment{width: 50px;}
-		#ablum{width: 50px;}
-		#date{width: 50px;}
-		#user{width: 50px;}*/
-	
-	
+	form {border: 3px solid lightslategrey; width: 500px; padding: 10px; background-color: lightskyblue}
+	img { border: 3px solid lightslategrey;}
+	/*title, comment {margin: 10px}*
 	</style>
 	
 	<script>
-		$(document).ready(function(){
-			$( "#album" ).accordion();
-	});
+		
 		
 	</script>
 </head>
 
 <body>
-	<div id="album">
+	<div id="accordion">
 		<h3>Upload a photo</h3>
-		<div id = "uploaded pic">
+		<div id = "uploadedPic">
 			<img src = "http://lorempixel.com/400/200/sports/1/" style="float: left, display:block"/>
-				<div id = "inputs" style="float: right">
-				<form id "upload info">
-				<input type = "text" id = "title" name = "title" placeholder= "title your photo"><br/>
-				<input type = "text" id = "comment" name = "comment" placeholder= "add comments to your photo"><br/>
-				<input type = "text" id = "album" name = "album" placeholder= "i want to be a menu"><br/>
-				<input type = "text" id = "date" name = "date" placeholder= "i want to be a datepicker"><br/>
-			</form>
+				<input id = "uploadPhotoButton" type = "button" value = "browse"> 
+				<!--add link or search to upload local files, maybe drag and drop too-->
+				
+					<div class = "inputs" style="float: right">
+						<form id "uploadinfo">
+						<h4 class = " ui-widget-header" style = "margin-top: 5px">Add New Photo<h4>
+							
+							<input type = "text" id = "title" name = "title" placeholder= "title your photo">
+							
+							<input type = "text" id = "comment" name = "comment" placeholder= "comment photo"><br/>
+				
+							<input type = "text" id = "date" name = "date" placeholder= "date taken">
+				
+							<h4 class = " ui-widget-header" style = "margin-top: 5px">Choose Album to Upload To<h4>
+		
+							<div>
+								<input type = "checkbox" id = "portraitsAlbum" name = "album" placeholder= "select album">
+								<label for = "portraitsAlbum" style="color: white">Portraits</label>
+								
+								<input type = "checkbox" id = "landscapesAlbum" name = "landscapesAlbum">
+								<label for = "landscapesAlbum" style="color: white">Landscapes</label>
+								
+								<input type = "checkbox" id = "eventsAlbum" name = "eventsAlbum">
+								<label for = "eventsAlbum" style="color: white">Events</label>
+							</div>
 			</div>
+			<input id = "uploadTags" type = "button" value = "submit"> 		
 		</div>
 		<h3>head</h3>
 		<div>2</div>
