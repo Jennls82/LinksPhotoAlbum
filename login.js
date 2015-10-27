@@ -1,26 +1,3 @@
-var users = [];
-
-function User() {
-	this.userID = User.counter++;
-	this.username;
-	this.password;
-	this.photos = [];
-	this.albums = [];
-}
-
-User.counter = 0;
-
-User.prototype.login = function() {
-	$("#loginInterface").hide();
-	$("#newuserInterface").hide();
-	$("#loggedInInterface").show();
-	$("#username").html(this.username);
-}
-
-User.prototype.newaccount = function(un, pw) {
-	this.username = un;
-	this.password = pw;
-}
 
 $(document).ready(function() {
 	var holddiv = $("#newuserInterface");
@@ -43,8 +20,8 @@ console.log(holddiv);
 			}
 		}
 		alert("Username and password combination not found.");
-		$("#unBox").text = "";
-		$("#pwBox").text = "";
+		$("#unBox").html("");
+		$("#pwBox").html("");
 	}
 });
 	
