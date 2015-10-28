@@ -2,7 +2,7 @@ var photos = [];
 
 function Photo() {
 	this.photoID = Photo.counter++;
-	this.photoname;
+	// different from title this.photoname;
 	this.photopath;
 	this.phototitle;
 	this.photocaption;
@@ -14,7 +14,7 @@ function Photo() {
 
 Photo.counter = 0;
 
-Photo.prototype.newphoto = function(filepath) {
+Photo.prototype.newPhoto = function(filepath) {
 	this.photopath = filepath;
 	var slashpos = filepath.lastIndexOf("/");
 	var dotpos = filepath.lastIndexOf(".");
@@ -24,15 +24,15 @@ Photo.prototype.newphoto = function(filepath) {
 	photos.push(this);
 }
 
-Photo.prototype.setPhototitle = function(t) {
+Photo.prototype.setPhotoTitle = function(t) {
 	this.phototitle = t;
 }
 
-Photo.prototype.setPhotocaption = function(c) {
+Photo.prototype.setPhotoCaption = function(c) {
 	this.photocaption = c;
 }
 
 Photo.prototype.setPhotoTakenDate = function(d) {
-	this.photoTakenDate = d;
+	this.photoTakenDate = new Date(d);
 }
 
