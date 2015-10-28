@@ -18,6 +18,7 @@
 }
 
 #loggedInInterface {
-	height: 70px;
+	position: fixed;
+	height: 80px;
 	border: rebeccapurple solid 1px;
 }

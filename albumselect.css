@@ -1,0 +1,37 @@
+body {
+	height: 100%;
+	min-height: 100%;
+}
+.topleftsection {
+	position: fixed;
+	top: 80px;
+	width: 70%;
+	height: 30%;
+	border: red solid 1px;
+}
+
+.toprightsection {
+	position: fixed;
+	top: 80px;
+	width: 30%;
+	height: 30%;
+	float: left;
+	border: green solid 1px;
+}
+
+.bottomleftsection {
+	position: fixed;
+	width: 50%;
+	height: 70%;
+	float: clear;
+	border: blue solid 1px;
+}
+
+.bottomrightsection {
+	position: fixed;
+	width: 50%;
+	height: 70%;
+	float: left;
+	border: purple solid 1px;
+}
+

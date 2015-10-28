@@ -4,6 +4,7 @@
 		<meta charset=UTF-8>
 		<title>Create Album</title>
 		<link rel="stylesheet" href="jquery-ui.css">
+		<link rel="stylesheet" href="albumselect.css">
 		<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 		<script src="jquery-ui.min.js"></script>
 		<script src="Album.js"></script>
@@ -13,7 +14,7 @@
 
 <body>
 	<div id="albumcreatediv">
-		<div id="createInterface">
+		<div id="createInterface" class="topleftsection">
 			<div id="anLbl" class="label">Album Name:</div>
 			<div id="anBoxdiv" class="input"><input id="anBox" type="text">
 			<div id="dispspeeddiv">
@@ -21,6 +22,7 @@
 				<label for="speedLbl">Select speed at which pictures will swap (1 = slow, 10 = fast)</label>
 				<input type="text" id="speedLbl" readonly style="border:0, color:black" >
 			</div>
+		<div id="asOptions" class="toprightselection">
 			<div id="createBtn" class="button">Create Album</div>
 			<div id="manageBtn" class="button">Manage/Display Albums</div>
 		</div>

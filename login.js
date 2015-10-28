@@ -105,7 +105,7 @@ console.log("Radio Button #1 (Photo Management) clicked.")
 	$("#radio2").click(function(evt) {
 console.log("Radio Button #2 (Album Management) clicked.")
 		$("#maindiv").empty();
-		$("#maindiv").load("albummanage.html");
+		$("#maindiv").load("albumselect.html");
 	});
 				
 	$("#radio3").click(function(evt) {
