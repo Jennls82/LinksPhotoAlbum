@@ -14,7 +14,7 @@ deleteCookie(cookieName);
 
 
 function setCookie(cname, cvalue) {
-    document.cookie = cname + "=" + JSON.stringify(cvalue);
+    document.cookie = cname + "=" + cvalue;
 	return document.cookie;
 }
 
@@ -34,18 +34,15 @@ function getCookie(cname) {
 }
 
 function serialize(name, obj) {
-	console.log(obj);
-	var cookie = [name, '=', JSON.stringify(obj), ', domain=.', window.location.host.toString(), ', path=/;'].join('');
-	document.cookie = cookie;
-	return cookie;
+	$.cookie(name, JSON.stringify(obj), {
+		expires: 1
+	});
 }
 
 function deserialize(name) {
-	var result = document.cookie.match(name);
-	result && (result = JSON.parse(result[1]));
-	return result;
+	return $.cookie(name);
 }
 
 function deleteCookie(name) {
-	document.cookie = name + '=; expires=Thu, 01-Jan-1970 00:00:01 GMT;';
+	$.removeCookie(name);
 }

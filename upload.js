@@ -2,7 +2,9 @@ $(document).ready(function () {
 	
 	// var userObj = $("#loggedInInterface").data("user");
 	// console.log(userObj);
-
+	
+	
+	
 	$("#uploadPhotoButton").click(function () {
 		var newImg = $("#photopath").val();
 		$("#initPic").attr("src", newImg);
@@ -50,6 +52,11 @@ $(document).ready(function () {
 				  
 				var cookie = setCookie("photoArray1", photoArray);
 				console.log("cookie = " + cookie);
+				
+				localStorage.setItem("photoArray1", JSON.stringify(photoArray));
+				var storageTest = localStorage.getItem("photoArray1");
+				console.log(storageTest);
+				alert(storageTest);
 				JSON.stringify($("#uploadinfo").serializeArray())
 				console.log("JSON = " + photoArray);
 			})();
