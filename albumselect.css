@@ -1,37 +1,41 @@
-body {
-	height: 100%;
-	min-height: 100%;
-}
+
 .topleftsection {
-	position: fixed;
-	top: 80px;
-	width: 70%;
-	height: 30%;
+	
+	float: left;
+	width: 500px;
+	height: 300px;
 	border: red solid 1px;
+	margin: 5px;
 }
 
 .toprightsection {
-	position: fixed;
-	top: 80px;
-	width: 30%;
-	height: 30%;
+	
+	width: 200px;
+	height: 300px;
 	float: left;
 	border: green solid 1px;
+	margin: 5px;
 }
 
 .bottomleftsection {
-	position: fixed;
-	width: 50%;
-	height: 70%;
-	float: clear;
+	
+	width: 400px;
+	clear: left;
 	border: blue solid 1px;
+	margin: 5px;
 }
 
 .bottomrightsection {
-	position: fixed;
-	width: 50%;
-	height: 70%;
+	
+	width: 400px;
 	float: left;
 	border: purple solid 1px;
+	margin: 5px;
+}
+
+.bottomfullsection {
+	clear: left;
+	border: orange solid 1px;
+	margin: 5px;
 }
 

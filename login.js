@@ -25,8 +25,8 @@ console.log(usersarray.length);
 		alert("Username and password combination not found.");
 		$("#unBox").html("");
 		$("#pwBox").html("");
-	}
-});
+		}
+	});
 	
 	$("#newuserBtn").click(function(evt) {
 		console.log("New User Button clicked.");
@@ -105,7 +105,9 @@ console.log("Radio Button #1 (Photo Management) clicked.")
 	$("#radio2").click(function(evt) {
 console.log("Radio Button #2 (Album Management) clicked.")
 		$("#maindiv").empty();
-		$("#maindiv").load("albumselect.html");
+		$("#maindiv").load("albumselect.html #albumcreatediv", function() {
+			readyASDiv();
+		});
 	});
 				
 	$("#radio3").click(function(evt) {
@@ -113,7 +115,7 @@ console.log("Radio Button #3 (Display Albums) clicked.")
 		$("#maindiv").empty();
 		$("#maindiv").load("displayalbum.html");
 	});
-});
+});	//	end of document ready
 
 
 

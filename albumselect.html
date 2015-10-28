@@ -8,35 +8,36 @@
 		<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 		<script src="jquery-ui.min.js"></script>
 		<script src="Album.js"></script>
-		<script src="albummanagement.js"></script>
+		<script src="albumselect.js"></script>
+		
+		
 	</head>
 </html>
 
 <body>
-	<div id="albumcreatediv">
+	<div id="albumcreatediv">	
 		<div id="createInterface" class="topleftsection">
 			<div id="anLbl" class="label">Album Name:</div>
-			<div id="anBoxdiv" class="input"><input id="anBox" type="text">
+			<div id="anBoxdiv" class="input"><input id="anBox" type="text"></div>
 			<div id="dispspeeddiv">
 				<div id="dispspeedBox"></div>
 				<label for="speedLbl">Select speed at which pictures will swap (1 = slow, 10 = fast)</label>
 				<input type="text" id="speedLbl" readonly style="border:0, color:black" >
+			<div id="createBtn" class="button">Create New Album</div>
 			</div>
-		<div id="asOptions" class="toprightselection">
-			<div id="createBtn" class="button">Create Album</div>
-			<div id="manageBtn" class="button">Manage/Display Albums</div>
 		</div>
-	<div>
 		
-			<div id="userAlbumsdiv" class="bottomleftsection">
-				<div id="userAlbumsLbl" class="label">Your available albums:</div>
-				<div id="userAlbumsLst" class="list"></div>
-			</div>
-			
-			<div id="userPicsdiv" class="bottomrightsection">
-				<div id="userPicsLbl" class="label">Your available pictures:</div>
-				<div id="userPicsLst" class="list"></div>
-			</div>
+		<div id="userAlbumsdiv" class="bottomleftsection">
+			<div id="userAlbumsLbl" class="label">Your available albums:</div>
+			<label for="userAlbumsLst" class="label">Click on an album name to manage that album.</label>
+			<div id="userAlbumsLst" class="list"></div>
+		</div>
+		
+		<div id="userPicsdiv" class="bottomrightsection">
+			<div id="userPicsLbl" class="label">Your available pictures:</div>
+			<label for="userPicsLst" class="label">Click on a picture name to manage that picture.</label>
+			<div id="userPicsLst" class="list"></div>
+		</div>
 	
 
 

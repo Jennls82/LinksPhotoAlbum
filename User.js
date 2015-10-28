@@ -25,17 +25,7 @@ User.prototype.newaccount = function(un, pw) {
 	users.push(this);
 }
 
-User.prototype.dispAlbums = function() {
-	var localalbums = this.albums;
-	if(localalbums.length == 0) {
-		$("#albumsdisplay").html("You do not have any albums to display or manage.");
-	} else {
-		for(var i = 0; i < localalbums.length; i++) {
-//			$("albumsdisplay").
-		
-		}	
-	}
-}
+
 
 User.prototype.serialize = function() {
 	

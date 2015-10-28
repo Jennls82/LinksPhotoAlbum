@@ -1,4 +1,6 @@
-$(document).ready(function() {
+function readyAMDiv(album) {
+	
+	
 	
 	$(function() {
 		$("#dispspeedBox").slider({
@@ -61,4 +63,4 @@ console.log("Manage Album Button clicked.");
 	
 	
 	
-});	//	end $(document).ready(function())
+}	//	end readyAMDiv(album)
