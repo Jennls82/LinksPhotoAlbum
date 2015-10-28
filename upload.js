@@ -1,6 +1,9 @@
 $(document).ready(function () {
+	
+	// var userObj = $("#loggedInInterface").data("user");
+	// console.log(userObj);
+
 	$("#uploadPhotoButton").click(function () {
-		alert("Handler for .click() called.");
 		var newImg = $("#photopath").val();
 		$("#initPic").attr("src", newImg);
 	});
