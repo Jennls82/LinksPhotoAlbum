@@ -3,7 +3,7 @@
 	<head>
 		<meta charset=UTF-8>
 		<title>Header</title>
-		<link rel="stylesheet" type="text/css" href="style.css">
+		<link rel="stylesheet" href="jquery-ui.css">
 		<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 		<script src="User.js"></script>
 		<script src="login.js"></script>
@@ -36,8 +36,19 @@
 			<div id="welcome" class="label">Welcome, 
 				<div id="username" class="label"></div>
 			!</div>
+			
+		<!--<form style="margin-top: 1em;">
+			<div id="radioset">
+				<input type="radio" id="radio1" name="radio"><label for="radio1">Photo Management</label>
+				<input type="radio" id="radio2" name="radio" checked="checked"><label for="radio2">Album Management</label>
+				<input type="radio" id="radio3" name="radio"><label for="radio3">Display Albums</label>
+			</div>
+		</form>-->
+		<div id="radio1" class="button">Photo Management</div>
+		<div id="radio2" class="button">Album Management</div>
+		<div id="radio3" class="button">Display Albums</div>
+		<hr>
 		</div>
-	
 	</div>	
 </body>
 

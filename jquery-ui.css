@@ -6,6 +6,16 @@
 
 /* Layout helpers
 ----------------------------------*/
+.button {
+	border: rebeccapurple solid 1px;
+	width: 200px;
+	text-align: center;
+	font: 62.5% "Trebuchet MS", sans-serif;
+	padding: 2px;
+	margin: 2px;
+}
+
+
 .ui-helper-hidden {
 	display: none;
 }

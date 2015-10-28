@@ -1,3 +1,4 @@
+var users = [];
 
 $(document).ready(function() {
 	var holddiv = $("#newuserInterface");
@@ -91,6 +92,24 @@ console.log(users);
 			alert("Please complete username and password fields.");
 		}
 		
+	});
+	
+	$("#radio1").click(function(evt) {
+console.log("Radio Button #1 (Photo Management) clicked.")
+		$("#maindiv").empty();
+		$("#maindiv").load("photomanage.html");
+	});
+				
+	$("#radio2").click(function(evt) {
+console.log("Radio Button #2 (Album Management) clicked.")
+		$("#maindiv").empty();
+		$("#maindiv").load("albummanage.html");
+	});
+				
+	$("#radio3").click(function(evt) {
+console.log("Radio Button #3 (Display Albums) clicked.")
+		$("#maindiv").empty();
+		$("#maindiv").load("displayalbum.html");
 	});
 });
 

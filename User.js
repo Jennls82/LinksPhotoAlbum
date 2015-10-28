@@ -1,4 +1,4 @@
-var users = [];
+
 
 function User() {
 	this.userID = User.counter++;
@@ -15,12 +15,14 @@ User.prototype.login = function() {
 	$("#newuserInterface").hide();
 	$("#loggedInInterface").show();
 	$("#username").html(this.username);
-	$("#newuserInterface").data("user", this);
+	$("#loggedInInterface").data("user", this);
 }
 
 User.prototype.newaccount = function(un, pw) {
 	this.username = un;
 	this.password = pw;
+	
+	users.push(this);
 }
 
 User.prototype.dispAlbums = function() {
@@ -29,7 +31,7 @@ User.prototype.dispAlbums = function() {
 		$("#albumsdisplay").html("You do not have any albums to display or manage.");
 	} else {
 		for(var i = 0; i < localalbums.length; i++) {
-			$("albumsdisplay").
+//			$("albumsdisplay").
 		
 		}	
 	}
