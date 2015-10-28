@@ -10,7 +10,7 @@
 	
 					<!--upload photos, add text input for tag, album, date, user-->
 	<style>
-	form {border: 3px solid lightslategrey; width: 500px; padding: 10px; background-color: lightskyblue}
+	 #albumCheck , #uploadPic , #picURL,uploadWelcome  {border: 3px solid lightslategrey; width: 500px; padding: 10px; background-color: lightskyblue}
 	img { border: 3px solid lightslategrey;}
 	/*title, comment {margin: 10px}*
 	</style>
@@ -20,46 +20,52 @@
 		
 	</script>
 </head>
-
 <body>
+		<h4 class = " ui-widget-header" style = "margin-top: 5px">picture time bitches!<h4>
+				<div id = "upload">
+		  		  <form id = "uploadWelcome">
+					<p id = "uploadExplanation" style="color: lightslategrey ">Team Gryffindore Photo sharing</p>
+				  </form>
+				</div>
+		
 	<div id="accordion">
 		<h3>Upload a photo</h3>
 		<div id = "uploadedPic">
-			<img src = "http://lorempixel.com/400/200/sports/1/" style="float: left, display:block"/>
-				<input id = "uploadPhotoButton" type = "button" value = "browse"> 
-				<!--add link or search to upload local files, maybe drag and drop too-->
-				
-					<div class = "inputs" style="float: right">
-						<form id "uploadinfo">
+			<form id = "picURL">
+				<img src = "http://lorempixel.com/400/200/sports/1/" style="float: left, display:block"/>
+					<p id ="urlWarn" style="color: white">Enter the inerwebs url for the pic you just have to overshare</p>
+					<input type = "text" id = "photopath" name = "photopath" placeholder= "URL of photo">
+					<input id = "uploadPhotoButton" type = "button" value = "share"> 
+			</form>
+		</div>
+		
+		<h3>Add Photo Information</h3>
+		<div class = "inputs">
+						<form id= "uploadPic">
 						<h4 class = " ui-widget-header" style = "margin-top: 5px">Add New Photo<h4>
 							
 							<input type = "text" id = "title" name = "title" placeholder= "title your photo">
 							
-							<input type = "text" id = "comment" name = "comment" placeholder= "comment photo"><br/>
+							<input type = "text" id = "caption" name = "caption" placeholder= "caption photo"><br/>
 				
 							<input type = "text" id = "date" name = "date" placeholder= "date taken">
-				
-							<h4 class = " ui-widget-header" style = "margin-top: 5px">Choose Album to Upload To<h4>
-		
-							<div>
+									<input id = "uploadTags" type = "button" value = "submit"> 
+						</form>		
+			</div>
+		<h3>Choose An Album</h3>
+				<div id ="albumMenu">
+					<form id = "albumCheck" >
+						<h4 class = " ui-widget-header" style = "margin-top: 5px">Add New Photo<h4>
 								<input type = "checkbox" id = "portraitsAlbum" name = "album" placeholder= "select album">
-								<label for = "portraitsAlbum" style="color: white">Portraits</label>
+								<label for = "portraitsAlbum"  style="color: white">Portraits</label>
 								
 								<input type = "checkbox" id = "landscapesAlbum" name = "landscapesAlbum">
 								<label for = "landscapesAlbum" style="color: white">Landscapes</label>
 								
 								<input type = "checkbox" id = "eventsAlbum" name = "eventsAlbum">
 								<label for = "eventsAlbum" style="color: white">Events</label>
-							</div>
-			</div>
-			<input id = "uploadTags" type = "button" value = "submit"> 		
-		</div>
-		<h3>head</h3>
-		<div>2</div>
-		<h3>head</h3>
-		<div>3</div>
-	</div>
-	
-	
+					</form>
+				</div>
+	 </div>
 </body>
 </html>
