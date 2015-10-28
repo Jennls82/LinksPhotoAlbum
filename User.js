@@ -36,3 +36,7 @@ User.prototype.dispAlbums = function() {
 		}	
 	}
 }
+
+User.prototype.serialize = function() {
+	
+} 
