@@ -18,7 +18,11 @@ Photo.prototype.newPhoto = function(filepath) {
 	this.photopath = filepath;
 	var slashpos = filepath.lastIndexOf("/");
 	var dotpos = filepath.lastIndexOf(".");
-	this.photoname = filepath.substring(slashpos, dotpos);
+	if(slashpos == -1 || dotpos == -1 || dotpos < slashpos) {
+		//	photoname needs to be entered manually
+	} else {
+		this.photoname = filepath.substring(slashpos, dotpos);
+	}
 	this.photoUploadDate = new Date(Date.now());
 	
 	photos.push(this);

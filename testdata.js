@@ -9,8 +9,8 @@ var album2 = new Album();
 	album2.newalbum("secondAlbum");
 
 var photo1 = new Photo();
-	photo1.newphoto("filepath/photo1.jpg");
+	photo1.newphoto("http://placekitten.com/200/300");
 var photo2 = new Photo();
-	photo2.newphoto("filepath/photo2.jpg");
+	photo2.newphoto("http://placekitten.com/250/350");
 	
 	

@@ -4,10 +4,12 @@
 		<meta charset=UTF-8>
 		<title>Header</title>
 		<link rel="stylesheet" href="jquery-ui.css">
+		<link rel="stylesheet" href="headerbar.css">
+		<link href='https://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'>
 		<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 		<script src="User.js"></script>
 		<script src="login.js"></script>
-		<script src="logintest.js"></script>
+		<script src="testdata.js"></script>
 		
 		<script>
 			
@@ -33,9 +35,10 @@
 		</div>
 		
 		<div id="loggedInInterface" style="display: none">
-			<div id="welcome" class="label">Welcome, 
+			<div id="welcome" class="label">
+				<div class="label">Welcome, </div>
 				<div id="username" class="label"></div>
-			!</div>
+			</div>
 			
 		<!--<form style="margin-top: 1em;">
 			<div id="radioset">
@@ -47,7 +50,6 @@
 		<div id="radio1" class="button">Photo Management</div>
 		<div id="radio2" class="button">Album Management</div>
 		<div id="radio3" class="button">Display Albums</div>
-		<hr>
 		</div>
 	</div>	
 </body>

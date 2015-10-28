@@ -1,4 +1,4 @@
-
+var users = [];
 
 function User() {
 	this.userID = User.counter++;
@@ -14,7 +14,7 @@ User.prototype.login = function() {
 	$("#loginInterface").hide();
 	$("#newuserInterface").hide();
 	$("#loggedInInterface").show();
-	$("#username").html(this.username);
+	$("#username").html(this.username + "!");
 	$("#loggedInInterface").data("user", this);
 }
 

@@ -2,36 +2,39 @@
 <html>
 	<head>
 		<meta charset=UTF-8>
-		<title>Create Album</title>
+		<title>Album Management</title>
 		<script src="albummanagement.js"></script>
 	</head>
 
 <body>
 	<div id="albummanagediv">
 		<div id="manageInterface">
-			
-			<div id="anLbl" class="label">Album Name:</div>
-			<div id="anBoxdiv" class="label"></div>
-			<div id="dispspeeddiv">
-				<div id="dispspeedBox"></div>
-				<label for="speedLbl">Select speed at which pictures will swap (1 = slow, 10 = fast)</label>
-				<input type="text" id="speedLbl" readonly style="border:0, color:black" >
+			<div id="selectedAlbum" class="topleftsection">
+				<div id="anLbl" class="label">Album Name:</div>
+					<div id="anBoxdiv" class="label"></div>
+				<div id="dispspeeddiv">
+					<div id="dispspeedBox"></div>
+					<label for="speedLbl">Select speed at which pictures will swap (1 = slow, 10 = fast)</label>
+					<input type="text" id="speedLbl" readonly style="border:0, color:black" >
+				</div>
+				<div id="adescLbl" class="label"></div>
+					<div id="adescBox" class="label"></div>
+				<div id="apubflagLbl" class="label"></div>
+					<div id="apubflagBox" class="label"></div>
 			</div>
-			<div id="manageBtn" class="button">Manage/Display Albums</div>
-						
-			<label for="albumsdiv">Select Album to Manage/Display</label>
-			<div id="albumsdiv">
+			
+			<div id="albummgmtoptions" class="toprightsection">
+				<div id="createAlbumBtn" class="button"></div>
+				<div id="addPhotosToAlbumBtn" class="button"></div>
 			</div>
 			
-			<label for="selectedalbum">Album Name:</label>
-			<div id="selectedalbum"></div>
-			
-			<div id="photosinalbum">
+			<div id="albumPhotoOrderdiv" class="bottomfullsection">
+				<div id="albumPhotoOrderLbl" class="label">Photo Order:</div>
+				<div id="albumPhotoOrderDnD" class="grid"></div>
 			</div>
-	<div>
-		
-	
-
+				
+		</div>
+	</div>
 
 
 </body>

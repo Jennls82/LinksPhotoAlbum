@@ -1,4 +1,4 @@
-var users = [];
+
 
 $(document).ready(function() {
 	var holddiv = $("#newuserInterface");
@@ -10,12 +10,14 @@ console.log(holddiv);
 	console.log("Login Button clicked.");
 		var un = $("#unBox").val();
 		var pw = $("#pwBox").val();
+		var usersarray = users;
+console.log(usersarray.length);
 		if(un != undefined) {			
-			for(var i = 0; i < users.length; i++) {
-				if(users[i].username == un && users[i].password == pw) {
-					var loggedinUser = users[i];
+			for(var i = 0; i < usersarray.length; i++) {
+				if(usersarray[i].username == un && usersarray[i].password == pw) {
+					var loggedinUser = usersarray[i];
 					loggedinUser.login();
-					$("#loggedInInterface").userObj = users[i];
+					$("#loggedInInterface").userObj = usersarray[i];
 					return loggedinUser;
 				} else {
 			}
