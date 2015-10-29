@@ -6,6 +6,7 @@ function Photo() {
 	this.photopath;
 	this.phototitle;
 	this.photocaption;
+	this.photoname;
 	this.photoUploadDate;
 	this.photoTakenDate;
 	this.metatags = [];
@@ -38,5 +39,9 @@ Photo.prototype.setPhotoCaption = function(c) {
 
 Photo.prototype.setPhotoTakenDate = function(d) {
 	this.photoTakenDate = new Date(d);
+}
+
+Photo.prototype.setPhotoName = function(n) {
+	this.photoname = n;
 }
 

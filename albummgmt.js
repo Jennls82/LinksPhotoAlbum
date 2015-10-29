@@ -30,7 +30,6 @@ console.log("Manage Album Button clicked.");
 	
 	$("#albumPhotoOrderDnD").sortable({
 		containment: "parent",
-		grid: [30, 30],						//	may not need this
 		activate: function() {
 			// highlight dragged obj
 		},
@@ -40,7 +39,27 @@ console.log("Manage Album Button clicked.");
 		placeholder: "emptySpace"
 	});
 	
+	$("#albumPhotoOrderCommitBtn").click(function(evt) {
+		var neworder = $("#albumPhotoOrderDnD").sortable("toArray");
+		var tempphotoarray = [];
+		
+		for(var i = 0; i < neworder.length; i++) {
+			var searchTerm = neworder[i].substring(5);
+			var x;
+			for(var j = 0; j < album.photos.length; j++) {
+				if(album.photos[j].photoID == searchTerm) {
+					x = j;
+				}
+			}
+console.log("DEBUG: reordering photoarray. found " + neworder[i] + " at index " + x);
+			tempphotoarray.push(album.photos[x]);
+		}
+		album.photos = tempphotoarray;
+		console.log(album.photos);
+	});
+	
 	function showPhotoOrder() {
+console.log("In showPhotoOrder()");
 		var albumphotos = album.photos;
 		var dnd = $("#albumPhotoOrderDnD");
 		
@@ -50,11 +69,10 @@ console.log("Manage Album Button clicked.");
 			for(var i = 0; i < albumphotos.length; i++) {
 				var photoObj = albumphotos[i];
 				var photoname = "<label for='photothumb'>" + photoObj.photoname + "</label>";
-				var photothumb = "<img src='" + photoObj.photopath + "' class='thumbnail'>";
-				dnd.append("<div class='sortable' id='photo" + photoObj.photoID + "'>" + photothumb + photoname + "</div>");
+				var photothumb = "<img src='" + photoObj.photopath + "' class='thumbnail' height=30px width=30px>";
+				dnd.append("<div class='thumbnail sortable' id='photo" + photoObj.photoID + "'>" + photothumb + photoname + "</div>");
 			}
 		}
-		
 	}
 	
 	

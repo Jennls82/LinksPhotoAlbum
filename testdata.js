@@ -21,3 +21,5 @@ photo1.setPhotoTitle("Test Title for photo1");
 photo1.setPhotoCaption("Test Caption for photo1");
 photo2.setPhotoTitle("Test Title for photo2");
 photo2.setPhotoCaption("Test Camption for photo2");
+photo1.setPhotoName("Photo1");
+photo2.setPhotoName("Photo2");
