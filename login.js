@@ -97,9 +97,11 @@ console.log(users);
 	});
 	
 	$("#radio1").click(function(evt) {
-console.log("Radio Button #1 (Photo Management) clicked.");
+console.log("Radio Button #1 (Add Photo) clicked.");
 		$("#maindiv").empty();
-		$("#maindiv").load("photomanage.html");
+		$("#maindiv").load("upload.html #maindiv", function() {
+			readyUpload();
+		});
 	});
 				
 	$("#radio2").click(function(evt) {
@@ -126,7 +128,13 @@ console.log("Radio Button #4 (Add Photos to Albums) clicked.");
 		});
 	});
 
-	
+	$("#radio5").click(function(evt) {
+console.log("Radio Button #5 (Manage Photo) clicked.");
+		$("#maindiv").empty();
+		$("#maindiv").load("photomgmt.html #photomgmtdiv", function() {
+			readyPM($("#loggedInInterface").data("user").photos[0]);
+		});
+	});
 	
 }	//	end of document ready
 

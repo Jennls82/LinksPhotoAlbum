@@ -47,7 +47,7 @@ function readyDAdiv(album) {
         var i = $("#picArea").data("photoNumber");
         i--;
         if (i == -1) {
-            i = albumphotos.length;
+            i = albumphotos.length-1;
         }
         var disPic = albumphotos[i];
         $("#picArea").data("photoNumber", i);

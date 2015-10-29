@@ -1,5 +1,5 @@
-$(document).ready(function () {
-	
+function readyUpload() {
+console.log("In readyUpload()");
 	// var userObj = $("#loggedInInterface").data("user");
 	// console.log(userObj);
 	
@@ -61,7 +61,7 @@ $(document).ready(function () {
 				console.log("JSON = " + photoArray);
 			})();
 		});
-});
+}
 	
 	
 	

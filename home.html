@@ -22,6 +22,7 @@
 		<script src="upload.js"></script>
 		<script src="displayalbum.js"></script>
 		<script src="addphotostoalbum.js"></script>
+		<script src="photomgmt.js"></script>
 		<script src="serialize.js"></script>
 		
 		
@@ -34,7 +35,28 @@
 		
 		img {
 			border: 3px solid lightslategrey;
-		}</style>
+		}
+					.emptySpace { border: medium dotted red; height: 30px; width: 30px; margin: 5px }
+		
+		
+		#albumCheck,
+		#uploadPic,
+		#picURL,
+		uploadWelcome {
+			border: 3px solid lightslategrey;
+			width: 500px;
+			padding: 10px;
+			background-color: lightskyblue
+		}
+		
+		img {
+			border: 3px solid lightslategrey;
+		}
+		/*title, comment {margin: 10px}*/
+	
+
+		
+		</style>
 		<script>
 			$(document).ready(function() {
 				$("#headerbar").load("header.html #headerwrap", function() {
@@ -42,14 +64,7 @@
 				});
 			});
 		</script>
-<<<<<<< HEAD
-	
-=======
-		
-		<style>
-			.emptySpace { border: medium dotted red; height: 30px; width: 30px; margin: 5px }
-		</style>
->>>>>>> origin/master
+
 	</head>
 	
 	<body>
