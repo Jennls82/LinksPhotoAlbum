@@ -1,6 +1,6 @@
 
 
-$(document).ready(function() {
+function readyLoginDiv() {
 	var holddiv = $("#newuserInterface");
 	holddiv.data("UNcheck", false);
 	holddiv.data("PWcheck", false);
@@ -17,7 +17,7 @@ console.log(usersarray.length);
 				if(usersarray[i].username == un && usersarray[i].password == pw) {
 					var loggedinUser = usersarray[i];
 					loggedinUser.login();
-					$("#loggedInInterface").userObj = usersarray[i];
+//					$("#loggedInInterface").userObj = usersarray[i];
 					return loggedinUser;
 				} else {
 			}
@@ -115,7 +115,11 @@ console.log("Radio Button #3 (Display Albums) clicked.")
 		$("#maindiv").empty();
 		$("#maindiv").load("displayalbum.html");
 	});
-});	//	end of document ready
+	
+
+	
+	
+}	//	end of document ready
 
 
 

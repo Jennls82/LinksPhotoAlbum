@@ -1,19 +1,20 @@
 function readyAMDiv(album) {
 	
+	showPhotoOrder();
 	
 	
-	$(function() {
-		$("#dispspeedBox").slider({
-			range: "max,",
-			min: 1,
-			max: 10,
-			value: 5,
-			slide: function(event, ui) {
-				$("#speedLbl").val(ui.value);
-			}
-		});
-		$("#speedLbl").val($("#dispspeedBox").slider("value"));
+	$("#dispspeedBox").slider({
+		range: "max,",
+		min: 1,
+		max: 10,
+		value: 5,
+		slide: function(event, ui) {
+			$("#speedLbl").val(ui.value);
+		}
 	});
+	
+	$("#speedLbl").val($("#dispspeedBox").slider("value"));
+	
 	
 	$("#createAlbumBtn").click(function(evt) {
 console.log("Create Album Button clicked.");
@@ -40,7 +41,6 @@ console.log("Manage Album Button clicked.");
 	});
 	
 	function showPhotoOrder() {
-		var album = $("#manageInterface").data("album");
 		var albumphotos = album.photos;
 		var dnd = $("#albumPhotoOrderDnD");
 		
@@ -48,7 +48,7 @@ console.log("Manage Album Button clicked.");
 			$("#albumPhotoOrderDnD").html("There are no photos in the album.");
 		} else {
 			for(var i = 0; i < albumphotos.length; i++) {
-				var photoObj = album[i];
+				var photoObj = albumphotos[i];
 				var photoname = "<label for='photothumb'>" + photoObj.photoname + "</label>";
 				var photothumb = "<img src='" + photoObj.photopath + "' class='thumbnail'>";
 				dnd.append("<div class='sortable' id='photo" + photoObj.photoID + "'>" + photothumb + photoname + "</div>");

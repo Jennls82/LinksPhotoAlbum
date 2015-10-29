@@ -1,4 +1,4 @@
-function readyASDiv() {
+function readyASDiv(album) {
 	
 	dispAlbums();
 	dispPhotos();
@@ -23,6 +23,20 @@ console.log("Album Create Button clicked.");
 		}
 	});
 	
+	$("#dispspeedBox").slider({
+		range: "max,",
+		min: 1,
+		max: 10,
+		value: 5,
+		slide: function(event, ui) {
+			$("#speedLbl").val(ui.value);
+		}
+	});
+	
+	$("#speedLbl").val($("#dispspeedBox").slider("value"));
+	
+	
+	
 	function dispAlbums() {
 console.log("in albumselect.js/dispAlbums()");
 		var loggedInInterface = $("#loggedInInterface");
@@ -34,12 +48,13 @@ console.log("in albumselect.js/dispAlbums()");
 		} else {			
 			for(var i = 0; i < user.albums.length; i++) {
 				var tempname = "album" + i;
-				var tempdiv = "<div id='" + tempname + "' class='selector'>" + user.albums[i].albumname + "</div>";
+				var tempobj = user.albums[i];
+				var tempdiv = "<div id='" + tempname + "' class='selector'>" + tempobj.albumname + "</div>";
 				albumsdiv.append(tempdiv);
-				$("#" + tempname).click(function(evt) {
-					manageAlbum(tempname);
-				});
-				$("#" + tempname).data(tempname, user.albums[i]);
+				 $("#" + tempname).click(function(evt) {
+				 	manageAlbum($(this).attr("id"));
+				 });
+				$("#userAlbumsdiv").data(tempname, albums[i]);
 			}
 		}
 	}
@@ -55,22 +70,33 @@ console.log("in albumselect.js/dispPhotos()");
 		} else {			
 			for(var i = 0; i < user.photos.length; i++) {
 				var tempname = "photo" + i;
-				var tempdiv = "<div id='" + tempname + "' class='selector'>" + user.photos[i].photoname + "</div>";
+				var tempname2 = "&quot;" + tempname + "&quot;";
+				var tempobj = user.photos[i];
+				var tempdiv = "<div id='" + tempname + "' class='selector'>" + tempobj.photoname + "</div>";
 				photosdiv.append(tempdiv);
 				$("#" + tempname).click(function(evt) {
-					managePhoto(tempname);
+					managePhoto($(this).attr("id"));
 				});
-				$("#" + tempname).data(tempname, user.photos[i]);
+				$("#" + tempname).data(tempname, tempobj)
+				
 			}
 		}
 	}
 	
+	
+	
+}
 	function manageAlbum(albumname) {
-		var album = $("#" + albumname).data(albumname);
+console.log("In manageAlbum: ");
+		var album = $("#userAlbumsdiv").data(albumname);
 		$("#maindiv").empty();
 		$("#maindiv").load("albummanage.html #albummanagediv", function() {
 			readyAMDiv(album);
 		});
+	}
+	
+	function manageAlbum2() {
+		console.log("In manageAlbum2()");
 	}
 	
 	function managePhoto(photoname) {
@@ -80,5 +106,7 @@ console.log("in albumselect.js/dispPhotos()");
 			readyPMDiv(photo);
 		});
 	}
-	
-}
+
+	function xyz() {
+		console.log("In xyz()");
+	}
