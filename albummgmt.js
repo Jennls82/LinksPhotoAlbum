@@ -19,13 +19,17 @@ function readyAMDiv(album) {
 	$("#createAlbumBtn").click(function(evt) {
 console.log("Create Album Button clicked.");
 		$("#albummanagediv").empty();
-		$("#albummanagediv").load("albumcreate.html");
+		$("#maindiv").load("albumselect.html #albumcreatediv", function() {
+			readyASDiv();
+		});
 	});
 	
 	$("#addPhotosToAlbumBtn").click(function(evt) {
 console.log("Manage Album Button clicked.");
 		$("#albummanagediv").empty();
-		$("#albummanagediv").load("addphotos.html");
+		$("#maindiv").load("addphotostoalbum.html #addphotoalbumdiv", function() {
+			readyAPtADiv();
+		});
 	});
 	
 	$("#albumPhotoOrderDnD").sortable({

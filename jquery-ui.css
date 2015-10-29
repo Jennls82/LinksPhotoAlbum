@@ -28,6 +28,15 @@
 	margin: 10px;
 }
 
+.container {
+	width: 100px;
+	height: 200px;
+	background-color: rebeccapurple;
+	border: black, solid, 1px;
+	float: left;
+	margin: 20px;
+}
+
 .ui-helper-hidden {
 	display: none;
 }

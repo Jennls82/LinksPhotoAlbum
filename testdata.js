@@ -23,3 +23,5 @@ photo2.setPhotoTitle("Test Title for photo2");
 photo2.setPhotoCaption("Test Camption for photo2");
 photo1.setPhotoName("Photo1");
 photo2.setPhotoName("Photo2");
+user1.photos.push(photo1);
+user1.photos.push(photo2);
