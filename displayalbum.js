@@ -1,30 +1,45 @@
-(function readyDAdiv(album) {
+function readyDAdiv(album) {
  console.log("DivRTG");
  
+ 
  //var user = $(“#loggedInInterface”).data(“user”); 
+    cycle();
 
-    (function cycle() {
+    function cycle() {
         console.log("in fxn cycle");
-        var albumphotos = album;//.photo was here and undefined
+        var albumphotos = album.photos; 
         console.log("album " + album);//undefined
        // var albumphotos = album.photo;
-        var i = 0;
-        var disPic = albumphotos[i];//now this "0" is undefined
-        $("#phototitle").html(disPic[i].phototitle);
-        $("#picArea").html("<img src='" + disPic[i].photopath + "' class='images'>");
-        $("#captionText").html(disPic[i].photocaption);
+       var i = 0;
+       var stopper = false;
+        
+ var myvar = setInterval(displaycycle, 2000); 
+       
+        $("#picArea").click(function() {
+            clearInterval(myvar);
+        });
+        // var i = 0;
+        function displaycycle() {
+            var disPic = albumphotos[i];//now this "0" is undefined
+            $("#phototitle").html(disPic.phototitle);
+            $("#picArea").html("<img src='" + disPic.photopath + "' class='images'>");
+            $("#captionText").html(disPic.photocaption);
+            if(++i == albumphotos.length) {
+                i = 0;
+            } 
+       }
 
-
-        console.log("in fxn Cycle");
-        while (i < albumphotos.length) {
-            i++;
-            disPic = albumphotos[i];
-            $("#phototitle").html(disPic[i].phototitle);
-            $("#picArea").html("<img src='" + disPic[i].photopath + "' class='images' data-i='" + i + "'>");
-            $("#captionText").html(disPic[i].photocaption);
-        }
-        cycle();
-    })();//end cycle fxn
+        // console.log("in fxn Cycle");
+        // while (++i < albumphotos.length) {
+        //     disPic = albumphotos[i];
+        //     $("#phototitle").html(disPic.phototitle);
+        //     $("#picArea").html("<img src='" + disPic.photopath + "' class='images' data-i='" + i + "'>");
+        //     $("#captionText").html(disPic.photocaption);
+        //     timeout();
+        // }
+    //    cycle();
+    }//end cycle fxn
+  
   
     var stop = false;
     $("stop").click(function () {
@@ -73,7 +88,7 @@
 //          $("#captionText").html(disPic[i].photocaption);   
 //      }
 //     });
-})();
+};
 
 
 

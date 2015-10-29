@@ -9,11 +9,15 @@ var album2 = new Album();
 	album2.newalbum("secondAlbum");
 
 var photo1 = new Photo();
-	photo1.newPhoto("http://placekitten.com/200/300");
+	photo1.newPhoto("http://placehold.it/350x150");
 var photo2 = new Photo();
-	photo2.newPhoto("http://placekitten.com/250/350");
+	photo2.newPhoto("http://placehold.it/200x250");
 	
 user1.albums.push(album1);
 user1.albums.push(album2);
 album1.photos.push(photo1);
 album1.photos.push(photo2);	
+photo1.setPhotoTitle("Test Title for photo1");
+photo1.setPhotoCaption("Test Caption for photo1");
+photo2.setPhotoTitle("Test Title for photo2");
+photo2.setPhotoCaption("Test Camption for photo2");

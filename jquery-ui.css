@@ -15,6 +15,14 @@
 	margin: 2px;
 }
 
+.thumbnail {
+	height: 30px;
+	width: 30px;
+}
+
+.emptySpace {
+	border: red, dotted, 2px;
+}
 
 .ui-helper-hidden {
 	display: none;

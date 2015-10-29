@@ -113,7 +113,9 @@ console.log("Radio Button #2 (Album Management) clicked.")
 	$("#radio3").click(function(evt) {
 console.log("Radio Button #3 (Display Albums) clicked.")
 		$("#maindiv").empty();
-		$("#maindiv").load("displayalbum.html");
+		$("#maindiv").load("displayalbum.html #displayAlbum", function() {
+			readyDAdiv($("#loggedInInterface").data("user").albums[0]);
+		});
 	});
 	
 
