@@ -1,4 +1,4 @@
-function readyASDiv(album) {
+function readyASDiv() {
 	
 	dispAlbums();
 	dispPhotos();

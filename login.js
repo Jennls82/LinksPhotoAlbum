@@ -97,13 +97,13 @@ console.log(users);
 	});
 	
 	$("#radio1").click(function(evt) {
-console.log("Radio Button #1 (Photo Management) clicked.")
+console.log("Radio Button #1 (Photo Management) clicked.");
 		$("#maindiv").empty();
 		$("#maindiv").load("photomanage.html");
 	});
 				
 	$("#radio2").click(function(evt) {
-console.log("Radio Button #2 (Album Management) clicked.")
+console.log("Radio Button #2 (Album Management) clicked.");
 		$("#maindiv").empty();
 		$("#maindiv").load("albumselect.html #albumcreatediv", function() {
 			readyASDiv();
@@ -111,13 +111,20 @@ console.log("Radio Button #2 (Album Management) clicked.")
 	});
 				
 	$("#radio3").click(function(evt) {
-console.log("Radio Button #3 (Display Albums) clicked.")
+console.log("Radio Button #3 (Display Albums) clicked.");
 		$("#maindiv").empty();
 		$("#maindiv").load("displayalbum.html #displayAlbum", function() {
 			readyDAdiv($("#loggedInInterface").data("user").albums[0]);
 		});
 	});
 	
+	$("#radio4").click(function(evt) {
+console.log("Radio Button #4 (Add Photos to Albums) clicked.");
+		$("#maindiv").empty();
+		$("#maindiv").load("addphotostoalbum.html #addphotoalbumdiv", function() {
+			readyAPtADiv();
+		});
+	});
 
 	
 	

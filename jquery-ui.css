@@ -18,10 +18,23 @@
 .thumbnail {
 	height: 30px;
 	width: 30px;
+	float: left;
+	margin: 10px;
 }
 
 .emptySpace {
+	float: left;
 	border: red, dotted, 2px;
+	margin: 10px;
+}
+
+.container {
+	width: 100px;
+	height: 200px;
+	background-color: rebeccapurple;
+	border: black, solid, 1px;
+	float: left;
+	margin: 20px;
 }
 
 .ui-helper-hidden {
