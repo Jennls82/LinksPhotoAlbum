@@ -39,17 +39,19 @@ $(document).ready(function() {
 		<form id = "displayAlbum" style="margin-left: 350px">
 			<label id="albumNameText" style="color: white">Album Name</label><br/>
 				<div id="phototitle"></div>
+				<div id="captionText"></div>
 				<div id = "picArea">
 			
-			<!--style to arrows--><input id = "back" type="button" value = "previous"></br/>
 			<img id = "initPic" src = "http://lorempixel.com/400/200/sports/1/" style="margin-left: 50px"/>
-			<label id="captionText" style="color: white">Caption</label><br/>
-			<!--style to arrows--><input id = "next" type="button" value ="next"><br/>
+			<label id="caption" style="color: white">Caption</label><br/>
 				
 				</div><br>
 			
-				<input id = "cyclebutton" type = "button" value = "start">
-				<input id = "stop" type = "button" value = "stop">
+				<input id = "back" class="seek" type="button" value = "previous"/>
+				<input id = "cyclebutton" class="p" type = "button" value = "play">
+				<input id = "stop" class="p" type = "button" value = "pause">
+				<input id = "next" class="seek"type="button" value ="next"/>
+				
 		</form>
 		
 	</div>
