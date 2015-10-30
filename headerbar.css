@@ -1,6 +1,6 @@
 .label {
-	font-family: Oxygen;
-	font-size: 1.3em;
+	font-family: Varela;
+	font-size: 1.2em;
 	float: left;
 	margin: 10px;
 	margin-right: 2px;
@@ -22,3 +22,32 @@
 	height: 100px;
 	border: rebeccapurple solid 1px;
 }
+
+form {
+	border: 3px solid lightslategrey;
+	width: 500px;
+	padding: 10px;
+	background-color: lightskyblue
+}
+		
+img {
+	border: 3px solid lightslategrey;
+}
+					
+.emptySpace { 
+	border: medium dotted red; 
+	height: 30px; 
+	width: 30px; 
+	margin: 5px }
+		
+		
+#albumCheck,
+#uploadPic,
+#picURL,
+uploadWelcome {
+	border: 3px solid lightslategrey;
+	width: 500px;
+	padding: 10px;
+	background-color: lightskyblue
+}
+

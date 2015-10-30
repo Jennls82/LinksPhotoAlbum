@@ -1,7 +1,7 @@
-function readyPM(photo) {
+function readyPMDiv(photo) {
 	var user = $("#loggedInInterface").data("user");
 	
-	
+	console.log(photo);
 	
 	$("#photodisplaybox").html("<img src='" + photo.photopath + "'>");
 	$("#photonameBox").html("<input type='text' id='photoname' value='" + photo.photoname + "'>");
@@ -9,35 +9,16 @@ function readyPM(photo) {
 	$("#photocaptionBox").html("<input type='text' id='photocaption' value='" + photo.photocaption + "'>");
 	$("#phototakendateBox").html("<input type='text' id='photoTakenDate' placeholder='" + photo.photoTakenDate + "'>");
 	
-		$("#photoTakenDate").datepicker();
-	
-	$("#phototakendateBox").blur(function() {
-		
-	});
+	$("#photoTakenDate").datepicker();
 	
 	$("#pmCommitBtn").click(function(evt) {
 console.log("pmCommitBtn clicked.");
-		var a = $("#photonameBox").val();
-		console.log("in Commit button. a = " + a);
-
-
-		if($("#photonameBox").val() != photo.photoname ||
-		   $("#phototitleBox").val() != photo.phototitle ||
-		   $("#photocaptionBox").val() != photo.photocaption ||
-		   $("#phototakendateBox").val() != photo.photoTakenDate) {
-			   photo.setPhotoName($("#photonameBox").val());
-			   photo.setPhotoTitle($("#phototitleBox").val());
-			   photo.setPhotoCaption($("#photocaptionBox").val());
-			   photo.setPhotoTakenDate($("#phototakendateBox").val());
-		   }
+		photo.setPhotoName($("#photoname").val());
+		photo.setPhotoTitle($("#phototitle").val());
+		photo.setPhotoCaption($("#photocaption").val());
+		photo.setPhotoTakenDate($("#photoTakenDate").val());
 	});
 	
-	
-	
-	
-	
-	
-	//$("#phototakendateBox").datepicker();
 	dispAlbums();
 	dispPhotos();
 
@@ -105,7 +86,7 @@ console.log("In manageAlbum: ");
 	function managePhoto(photoname) {
 		var photo = $("#" + photoname).data(photoname);
 		$("#maindiv").empty();
-		$("#maindiv").load("photomanage.html #photomanagediv", function() {
+		$("#maindiv").load("photomgmt.html #photomgmtdiv", function() {
 			readyPMDiv(photo);
 		});
 	}
