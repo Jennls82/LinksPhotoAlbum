@@ -111,7 +111,6 @@ html, body {
 	border: #0073ea solid 1px;
 }
 
-
 .smalltxt {
 	float: left;
 	clear: both;
@@ -305,34 +304,111 @@ html, body {
 
 /*	upload.html */
 
+	#accordian {
+		width: 90%;
+	}
+
 	#albumCheck,
-	#uploadPic,
+	#uploadedPic,
+	#inputsforpic,
+	#photoeditdiv,
 	#picURL,
 	uploadWelcome {
 		border: 1px solid #0073ea;
-		width: 500px;
+		width: 400px;
 		padding: 10px;
 		background-color: ghostwhite;
-
+		min-height: 240px;
 	}
 	
-	img {
-		border: 3px solid lightslategrey;
-	}
-	
-	#accordion {
-		margin-top: 5px;
-		margin-left: 5px;
-		width: 90%;
-		min-height: 350px;
+	#pictureBox {
+		position: absolute;
+		border: #0073ea inset 6px;
+		min-width: 450px;
+		height: 250px;
+		left: 475px;
+		top: 62px;
+		margin-bottom: 5px;
+		background-color: black;
 	}
 	
 	#initPic {
-		float: left;
+		display: block;
+		margin: auto auto;
+		max-height: 250px;
+		max-width: 450px;
+	}
+
+	#uploadPhotoButton {
 		clear: both;
-		border: #0073ea inset 6px;
+		float: left;
+		margin: 10px;
+	}
+
+	#photopath {
+		float: left;
+		width: 200px;
 	}
 	
+	#titleLbl,
+	#captionLbl,
+	#dateLbl {
+		clear: both;
+		float: left;
+		margin-top: 15px;
+		
+	}
+	
+	#title,
+	#caption,
+	#date {
+		float: left;
+		width: 200px;
+	}
+	
+	#portaitsAlbum,
+	#landscapesAlbum,
+	#eventsAlbum {
+		clear: both;
+	}
+
+/*	photomanage.html */
+	
+
+	#pictureBox2 {
+		position: absolute;
+		border: #0073ea inset 6px;
+		min-width: 450px;
+		height: 250px;
+		left: 525px;
+		top: 10px;
+		margin: auto auto;
+		background-color: black;
+	}
+	
+	#photonameLbl,
+	#phototitleLbl,
+	#photocaptionLbl,
+	#phototakendateLbl {
+		clear: both;
+		float: left;
+		margin-top: 15px;
+		
+	}
+	
+	#photonameBox, 
+	#phototitleBox,
+	#photocaptionBox,
+	#phototakendateBox {
+		margin-top: 6px;
+		float: left;
+		width: 200px;
+	}
+	
+	#pmCommitBtn {
+		clear: both;
+		float: left;
+	}	
 	.disinfo{
 		text-align: center;
 		font-size: 20px;

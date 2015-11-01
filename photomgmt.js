@@ -3,7 +3,7 @@ function readyPMDiv(photo) {
 	
 	console.log(photo);
 	
-	$("#photodisplaybox").html("<img src='" + photo.photopath + "'>");
+	$("#pictureBox2").html("<img src='" + photo.photopath + "'>");
 	$("#photonameBox").html("<input type='text' id='photoname' value='" + photo.photoname + "'>");
 	$("#phototitleBox").html("<input type='text' id='phototitle' value='" + photo.phototitle + "'>");
 	$("#photocaptionBox").html("<input type='text' id='photocaption' value='" + photo.photocaption + "'>");
