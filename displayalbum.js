@@ -14,7 +14,7 @@ function readyDAdiv(album) {
             var disPic = albumphotos[i];
             $("#phototitle").html(disPic.phototitle);
             $("#picArea").data("photoNumber", i);
-            $("#picArea").html("<img src='" + disPic.photopath + "' class='images' style='margin-left: 70px'>");
+            $("#picArea").html("<img src='" + disPic.photopath + "' class='images' style='margin-left: 70px;'>");
             $("#captionText").html(disPic.photocaption);
             if (++i == albumphotos.length) {
                 i = 0;

@@ -28,7 +28,9 @@
 	<script>
 $(document).ready(function() {
 				$("#headerbar").load("header.html");
-				
+
+				$( ".next" ).button({  icons: { primary: "ui-icon-arrowthickstop-1-e" }});
+				$( ".back" ).button({  icons: { primary: "ui-icon-arrowthickstop-1-w" }});
 
 			});
 	</script>	
@@ -36,22 +38,22 @@ $(document).ready(function() {
 <body>
 	<div id="headerbar"></div><br/><br/><br/>
 	<div id="maindiv">
-		<form id = "displayAlbum" style="margin-left: 350px">
-			<label id="albumNameText" style="color: white">Album Name</label><br/>
-				<div id="phototitle"></div>
-				<div id="captionText"></div>
-				<div id = "picArea">
+		<form id = "displayAlbum">
+				<br/>
+				<div id="phototitle"  class = "disinfo" ></div><br/>
+				<div id = "picArea"></br>
 			
-			<img id = "initPic" src = "http://lorempixel.com/400/200/sports/1/" style="margin-left: 50px"/>
-			<label id="caption" style="color: white">Caption</label><br/>
+			<img id = "initPicDis" src = "http://lorempixel.com/400/200/sports/1/"/>
+			
 				
 				</div><br>
-			
-				<input id = "back" class="seek" type="button" value = "previous"/>
-				<input id = "cyclebutton" class="p" type = "button" value = "play">
-				<input id = "stop" class="p" type = "button" value = "pause">
-				<input id = "next" class="seek"type="button" value ="next"/>
-				
+			<div id= "displayButtons" style = "position:fixed;bottom:150px;width:100%;">
+				<div id="captionText" class = "disinfo" ></div><br/>
+				<input id = "back" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" type="button" value = "previous" />
+				<input id = "cyclebutton" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only"  type = "button" value = "play">
+				<input id = "stop" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only"  type = "button" value = "pause">
+				<input id = "next" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" type="button" value ="next"/>
+			</div>	
 		</form>
 		
 	</div>

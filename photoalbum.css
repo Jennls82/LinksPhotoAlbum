@@ -332,3 +332,21 @@ html, body {
 		clear: both;
 		border: #0073ea inset 6px;
 	}
+	
+	.disinfo{
+		text-align: center;
+		font-size: 20px;
+		color: #0073ea;	
+	}
+	
+	#displayAlbum{
+		text-align: center;
+	}
+	
+	#picArea{
+		 align: center;
+	}
+	
+	
+	
+	
