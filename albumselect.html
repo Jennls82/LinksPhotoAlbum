@@ -1,47 +1,28 @@
-<!DOCTYPE HTML>
-<html>
-	<head>
-		<meta charset=UTF-8>
-		<title>Create Album</title>
-		<link rel="stylesheet" href="jquery-ui.css">
-		<link rel="stylesheet" href="albumselect.css">
-		<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-		<script src="jquery-ui.min.js"></script>
-		<script src="Album.js"></script>
-		<script src="albumselect.js"></script>
-		
-		
-	</head>
-</html>
-
-<body>
 	<div id="albumcreatediv">	
-		<div id="createInterface" class="topleftsection">
-			<div id="anLbl" class="label">Album Name:</div>
+		<div id="createInterface" class="selectalbum">
+			<div id="anLbl" class="label">New Album Name:</div>
 			<div id="anBoxdiv" class="input"><input id="anBox" type="text"></div>
 			<div id="dispspeeddiv">
+				<label id="sliderLbl" class="smalltxt">Select speed at which pictures will swap (1 = slow, 10 = fast)</label>
 				<div id="dispspeedBox"></div>
-				<label for="speedLbl">Select speed at which pictures will swap (1 = slow, 10 = fast)</label>
 				<input type="text" id="speedLbl" readonly style="border:0, color:black" >
-			<div id="createBtn" class="button">Create New Album</div>
+			<div id="createBtn" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only headerbtn" role="button">Create New Album</div>
 			</div>
 		</div>
 		
-		<div id="userAlbumsdiv" class="bottomleftsection">
+		<div id="albummgmtoptions" class="toprightsection">
+			<div id="createAlbumBtn" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only headerbtn" role="button">Create New Album</div>
+			<div id="addPhotosToAlbumBtn" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only headerbtn" role="button">Add Photos to Album</div>
+		</div>
+		
+		<div id="userAlbumsdiv" class="userAlbumsdiv">
 			<div id="userAlbumsLbl" class="label">Your available albums:</div>
-			<label for="userAlbumsLst" class="label">Click on an album name to manage that album.</label>
+			<label for="userAlbumsLst" class="smalltxt">Click on an album name to manage that album.</label>
 			<div id="userAlbumsLst" class="list"></div>
-			<div id="test" class="label" onclick="xyz()">TEST MANAGE ALBUM</div>
 		</div>
 		
 		<div id="userPicsdiv" class="bottomrightsection">
 			<div id="userPicsLbl" class="label">Your available pictures:</div>
-			<label for="userPicsLst" class="label">Click on a picture name to manage that picture.</label>
+			<label for="userPicsLst" class="smalltxt">Click on a picture name to manage that picture.</label>
 			<div id="userPicsLst" class="list"></div>
 		</div>
-	
-
-
-
-</body>
-			

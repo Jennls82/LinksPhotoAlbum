@@ -1,5 +1,4 @@
 function readyAMDiv(album) {
-	
 	showPhotoOrder();
 	
 	
@@ -15,6 +14,7 @@ function readyAMDiv(album) {
 	
 	$("#speedLbl").val($("#dispspeedBox").slider("value"));
 	
+	$("#anBoxLbl").html(album.albumname);
 	
 	$("#createAlbumBtn").click(function(evt) {
 console.log("Create Album Button clicked.");
@@ -72,8 +72,8 @@ console.log("In showPhotoOrder()");
 		} else {
 			for(var i = 0; i < albumphotos.length; i++) {
 				var photoObj = albumphotos[i];
-				var photoname = "<label for='photothumb'>" + photoObj.photoname + "</label>";
-				var photothumb = "<img src='" + photoObj.photopath + "' class='thumbnail' height=30px width=30px>";
+				var photoname = "<div class='objlabel'>" + photoObj.photoname + "</div>";
+				var photothumb = "<img src='" + photoObj.photopath + "' class='thumbnail objlabel'>";
 				dnd.append("<div class='thumbnail sortable' id='photo" + photoObj.photoID + "'>" + photothumb + photoname + "</div>");
 			}
 		}

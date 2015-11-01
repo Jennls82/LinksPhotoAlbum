@@ -1,4 +1,334 @@
-#headerwrap {
-	height: 100px;
-	border: 
+html, body {
+	height: 100%;
+	display: flex;
+	flex-direction: column;
 }
+
+#footer {
+	text-align: center;
+	font-size: 1.4em;
+	text-decoration: italic;
+	color: #0073ea;
+	margin-top: 10px;
+	
+}
+/*	header.html */
+#headerbar {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    height: 55px;
+	padding: 10px;
+	margin-bottom: 10px;
+	padding-top: 25px;
+	border: #0073ea solid 1px;
+	background-color: ghostwhite;	
+}
+
+#footer {
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+    height: 50px;
+	margin-top: 10px;
+    border: #0073ea solid 1px;
+	background-color: ghostwhite;
+}
+
+#maindiv {
+    position: fixed;
+    top: 100px;
+    bottom: 70px;
+    left: 10px;
+    right: 10px;
+	margin-top: 10px;
+	border: #0073ea solid 1px;
+	background-color: white;
+    overflow: auto;
+}
+
+.label {
+	float: left;
+	margin: 5px;
+	font-size: 1.3em;
+}
+
+.input {
+	float: left;
+	margin: 5px;
+}
+
+.headerbtn {
+	font-size: 1em;
+	margin-top: 2px;
+	margin-right: 5px;
+	margin-left: 5px;
+	padding-top: 6px;
+	padding-bottom: 3px;
+	padding-left: 5px;
+	padding-right: 5px;
+	background-color: white;
+	
+}
+
+.loggedinbtn {
+	float: right;
+	margin: 0px;
+	font-size: 0.9em;
+	margin-top: 7px;
+	padding-left: 3px;
+	padding-right: 3px;
+	padding-top: 4px;
+	padding-bottom: 4px;
+	background-color: white;
+}
+
+.input[type="text"] {
+	padding: 10px;
+	border: solid 1px #dcdcdc;
+	transition: box-shadow 0.3s, border 0.3s;
+}
+
+.input[type="text"]:focus,
+.input[type="text"].focus {
+	border: solid 1px #707070;
+	box-shadow: 0 0 5px 1px  lightyellow;
+}
+
+/* albumselect.html */
+.selectalbum {
+	margin-left: 20px;
+	margin-top: 10px;
+	min-height: 120px;
+	max-height: 120px;
+	width: 35%;
+	float: left;
+	clear: both;
+	padding: 10px;
+	background-color: ghostwhite;
+	border: #0073ea solid 1px;
+}
+
+
+.smalltxt {
+	float: left;
+	clear: both;
+	margin-top: 10px;
+	margin-left: 5px;
+	font-size: 0.85em;
+	max-width: 300px;
+}
+
+#dispspeedBox {
+	float: left;
+	clear: both;
+	width: 200px;
+	margin-top: 8px;
+}
+
+#speedLbl {
+	float: left;
+	width: 20px;
+	margin-top: 7px;
+	margin-left: 13px;
+	text-align: center;
+	border: #0073ea solid 1px;
+}
+
+#createBtn {
+	clear: both;
+	float: left;
+	margin-top: 10px;
+	margin-left: 110px;
+}
+
+#userAlbumsdiv {
+	clear: both;
+	float: left;
+	width: 40%;
+	align-items: flex-end;
+	background-color: ghostwhite;
+	border: #0073ea solid 1px;
+	padding: 10px;
+	margin-top: 10px;
+	margin-left: 20px;	
+}
+
+.selector {
+	clear: both;
+	float: left;
+	padding-top: 5px;
+	padding-bottom: 3px;
+	padding-left: 20px;
+	padding-right: 20px;
+	width: 50%;
+	border: black solid 1px;
+	background-color: white;
+	color: #0073ea;
+	margin-top: 3px;
+	margin-left: 20%;
+	text-align: center;
+	font-weight: bold;
+}
+
+#userPicsdiv {
+	float: left;
+	width: 40%;
+	background-color: ghostwhite;
+	border: #0073ea solid 1px;
+	padding: 10px;
+	margin-top: 10px;
+	margin-left: 5%;
+	margin-right: 20px;
+}
+
+#anBoxLbl {
+	color: #0073ea;
+	margin-top: 7px;
+	font-weight: bold;
+	font-size: 1.1em;
+}
+/*	albummanage.html */
+
+.photosort {
+	clear: both;
+	float: left;
+	background-color: ghostwhite;
+	border: #0073ea solid 1px;
+	width: 90%;
+	min-height: 200px;
+	margin-left: 20px;
+	margin-top: 10px;
+	margin-right: 20px;
+	margin-bottom: 10px;
+}
+
+#albumPhotoOrderLbl {
+	float: left;
+	
+}
+
+.thumbnail {
+	height: 50px;
+	width: 50px;
+	float: left;
+	margin: 10px;
+	text-align: center;
+	clear: none;
+}
+
+.objlabel {
+	text-align: center;
+	font-size: 0.85em;
+	color: #0073ea;
+	padding: 3px;
+	margin-left: 5px;
+}
+
+.emptySpace {
+	height: 50px;
+	width: 50px;
+	float: left;
+	margin: 10px;
+	text-align: center;
+	border: red dotted 2px;
+}
+
+#albumPhotoOrderCommitBtn {
+	clear: both;
+	float: left;
+	margin-top: 30px;
+	margin-right: 20px;
+}
+
+#addPhotosToAlbumBtn {
+	float: right;
+	margin-top: 30px;
+	margin-right: 20px;
+}
+
+#createAlbumBtn {
+	clear: right;
+	float: right;
+	margin-top: 30px;
+	margin-right: 85px;
+}
+
+/*	addphotostoalbum.html */
+#userphotocollection {
+	width: 90%;
+	border: #0073ea solid 1px;
+	background-color: ghostwhite;
+	float: left;
+	min-height: 200px;
+	margin-top: 10px;
+	margin-left: 20px;
+}
+
+#useralbumcollection {
+	margin-top: 10px;
+	margin-left: 20px;
+	width: 90%;
+	border: #0073ea solid 1px;
+	background-color: ghostwhite;
+	float: left;
+	min-height: 300px;
+}
+
+.collectbox {
+	float: left;
+	margin-top: 20px;
+	margin-left: 15px;
+	margin-right: 15px;
+	background-color: rebeccapurple;
+	min-height: 150px;
+	min-width: 100px;
+}
+
+.collectlabel {
+	text-align: center;
+	font-size: 0.9em;
+	color: white;
+	margin-top: 3px;
+	font-weight: bold;
+	margin-bottom: 6px;
+}
+
+.albumlist {
+	margin-top: 2px;
+	text-align: center;
+	color: ghostwhite;
+	font-size: 0.9em;
+}
+
+/*	upload.html */
+
+	#albumCheck,
+	#uploadPic,
+	#picURL,
+	uploadWelcome {
+		border: 1px solid #0073ea;
+		width: 500px;
+		padding: 10px;
+		background-color: ghostwhite;
+
+	}
+	
+	img {
+		border: 3px solid lightslategrey;
+	}
+	
+	#accordion {
+		margin-top: 5px;
+		margin-left: 5px;
+		width: 90%;
+		min-height: 350px;
+	}
+	
+	#initPic {
+		float: left;
+		clear: both;
+		border: #0073ea inset 6px;
+	}

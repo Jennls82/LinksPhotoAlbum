@@ -8,13 +8,13 @@
 
 <body>
 	<div id="albummanagediv">
-		<div id="manageInterface" height="150px" width="500px">
-			<div id="selectedAlbum" class="topleftsection">
+		<div id="manageInterface">
+			<div id="selectedAlbum" class="selectalbum">
 				<div id="anLbl" class="label">Album Name:</div>
-					<div id="anBoxdiv" class="label"></div>
+					<div id="anBoxdiv" class="label"></div><div id="anBoxLbl"></div>
 				<div id="dispspeeddiv">
+					<label for="speedLbl" class="smalltxt">Select speed at which pictures will swap (1 = slow, 10 = fast)</label>
 					<div id="dispspeedBox"></div>
-					<label for="speedLbl">Select speed at which pictures will swap (1 = slow, 10 = fast)</label>
 					<input type="text" id="speedLbl" readonly style="border:0, color:black" >
 				</div>
 				<div id="adescLbl" class="label"></div>
@@ -23,15 +23,15 @@
 					<div id="apubflagBox" class="label"></div>
 			</div>
 			
-			<div id="albummgmtoptions" class="toprightsection" width="400px">
-				<div id="createAlbumBtn" class="button">Create New Album</div>
-				<div id="addPhotosToAlbumBtn" class="button">Add Photos to Album</div>
+			<div id="albummgmtoptions" class="toprightsection">
+				<div id="createAlbumBtn" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only headerbtn" role="button">Create New Album</div>
+				<div id="addPhotosToAlbumBtn" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only headerbtn" role="button">Add Photos to Album</div>
 			</div>
 			
-			<div id="albumPhotoOrderdiv" class="bottomfullsection" width="400px">
+			<div id="albumPhotoOrderdiv" class="photosort">
 				<div id="albumPhotoOrderLbl" class="label">Photo Order:</div>
+				<div id="albumPhotoOrderInst" class="smalltxt">Drag photos into desired order.</div>
 				<div id="albumPhotoOrderDnD" class="grid"></div>
-				<div id="albumPhotoOrderCommitBtn" class="button">Commit Change</div>
 			</div>
 				
 		</div>

@@ -1,10 +1,6 @@
 function readyUpload() {
 console.log("In readyUpload()");
-	// var userObj = $("#loggedInInterface").data("user");
-	// console.log(userObj);
-	
-	
-	
+		
 	$("#uploadPhotoButton").click(function () {
 		var newImg = $("#photopath").val();
 		$("#initPic").attr("src", newImg);

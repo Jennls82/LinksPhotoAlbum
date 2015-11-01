@@ -35,7 +35,21 @@ console.log("Album Create Button clicked.");
 	
 	$("#speedLbl").val($("#dispspeedBox").slider("value"));
 	
+		$("#createAlbumBtn").click(function(evt) {
+console.log("Create Album Button clicked.");
+		$("#albummanagediv").empty();
+		$("#maindiv").load("albumselect.html #albumcreatediv", function() {
+			readyASDiv();
+		});
+	});
 	
+	$("#addPhotosToAlbumBtn").click(function(evt) {
+console.log("Manage Album Button clicked.");
+		$("#albummanagediv").empty();
+		$("#maindiv").load("addphotostoalbum.html #addphotoalbumdiv", function() {
+			readyAPtADiv();
+		});
+	});
 	
 	function dispAlbums() {
 console.log("in albumselect.js/dispAlbums()");
@@ -89,14 +103,11 @@ console.log("in albumselect.js/dispPhotos()");
 	function manageAlbum(albumname) {
 console.log("In manageAlbum: ");
 		var album = $("#userAlbumsdiv").data(albumname);
+console.log("album: " + album);
 		$("#maindiv").empty();
 		$("#maindiv").load("albummanage.html #albummanagediv", function() {
 			readyAMDiv(album);
 		});
-	}
-	
-	function manageAlbum2() {
-		console.log("In manageAlbum2()");
 	}
 	
 	function managePhoto(photoname) {
@@ -105,8 +116,4 @@ console.log("In manageAlbum: ");
 		$("#maindiv").load("photomanage.html #photomanagediv", function() {
 			readyPMDiv(photo);
 		});
-	}
-
-	function xyz() {
-		console.log("In xyz()");
 	}

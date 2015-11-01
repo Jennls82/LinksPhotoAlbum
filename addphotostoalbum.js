@@ -17,7 +17,7 @@ function readyAPtADiv() {
 		} else {
 			for(var i = 0; i < photoclen; i++) {
 				var photoObj = photoc[i];
-				var photoname = "<label for='photothumb' style='clear: both'>" + photoObj.photoname + "</label>";
+				var photoname = "<div class='objlabel'>" + photoObj.photoname + "</div>";
 				var photothumb = "<img src='" + photoObj.photopath + "' class='thumbnail' height=30px width=30px>";
 				dndP.append("<div class='thumbnail draggable' id='photo" + photoObj.photoID + "'>" + photothumb + photoname + "</div>");
 			}
@@ -34,9 +34,9 @@ function readyAPtADiv() {
 		} else {
 			for(var i = 0; i < albumclen; i++) {
 				var albumObj = albumc[i];
-				var albumname = "<label for='albumbox' style='clear: both'>" + albumObj.albumname + "</label>";
-				var albumbox = "<div id='" + albumname + "' class='albumcollectbox'></div>";
-				dndA.append("<div class='container sortable droppable' id='album" + albumObj.albumID + "'>" + albumObj.albumname + "</div>");
+				var albumname = "<div class='collectlabel'>" + albumObj.albumname + "</div>";
+				var albumbox = "<div class='objlabel' id='" + albumname + "'></div>";
+				dndA.append("<div class='container sortable droppable collectbox' id='album" + albumObj.albumID + "'>" + albumname + "</div>");
 			}
 		}
 	}
